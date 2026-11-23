@@ -5,7 +5,7 @@ authors:
   - family-names: Loveday
     given-names: Chey
 date-released: "2026-11-23"
-version: "1.0.1-preprint"
+version: "1.0.2-preprint"
 license:
   - CC-BY-4.0
   - Apache-2.0
@@ -18,7 +18,7 @@ preferred-citation:
       given-names: Chey
   year: 2026
   month: 11
-  version: "1.0.1-preprint"
+  version: "1.0.2-preprint"
   license: CC-BY-4.0
-  url: "https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/v1.0.1-preprint"
+  url: "https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/v1.0.2-preprint"
   notes: "GitHub preprint dated 23 November 2026. Cite the exact repository commit."

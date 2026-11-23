@@ -1,10 +1,10 @@
 # Current Lamport companion: the conservative subquarter proof
 
-This is the detailed technical companion to the editable [manuscript](MANUSCRIPT.md). It follows the selected R2 Lean route. The [bidirectional proof map](PROOF_MAP.md) links every step below to the article and exact declarations, types, targets and source hashes; its reverse index includes all 172 selected declarations. This companion supersedes the [received Lamport package](../acceptance/20261021/received/02_LAMPORT_PROOF_PACKAGE.md) for current reading. That historical text remains unchanged.
+The [manuscript](MANUSCRIPT.md) gives the ordinary proof. These notes break it into 25 steps. The [bidirectional proof map](PROOF_MAP.md) connects each step to its article sections and Lean declarations, with links to the definitions of the named targets.
 
 **Start here.** Read the goal and dependency map, then LP07–LP08 for the internal coarse construction, LP11–LP13 for the same-minor argument, and LP15–LP18 for the arithmetic count. LP21–LP24 explain why these estimates cover the original population. “By” identifies the inference; the map supplies its exact Lean support. An edge is a mathematical prerequisite, not every Lean import. Historical support modules and finite controls are labelled separately in the map.
 
-The ordinary argument uses Stewart's established theorem. The Lean conclusion is the implication from the explicit proposition `StewartPrimitiveThue`; Stewart's proof is not formalized here. The [historical review and evidence record](../exposition/20261021/README.md) retains its original scope. The [27 October status and evidence handover](../handover/20261027-cloud-review/STATUS.md) records the completed source-matching full-project build, native replay, five selected additional checker executions and protected three-target comparison, including the review supplement. Reconciliation with the original fourteen-statement R2 challenge, 33 controls and critical-profile reproduction/review requirements remains open; the completed run is not a blanket discharge of those requirements. Human specialist acceptance and publication approval remain separate. The [current coverage check](COVERAGE.md) accounts for the main map and supplement explicitly.
+The Lean counting theorems assume `StewartPrimitiveThue`. The ordinary proof supplies this premise from Stewart’s published theorem. The independently operated 23 November Linux replay checked the maintained modules together with the November audit supplement. The [verification supplement](SUPPLEMENT.md) gives the exact scope of the replay, the protected comparison and the downstream specialist review.
 
 ## Goal and quantifier discipline
 
@@ -52,15 +52,15 @@ flowchart TD
   U --> X[LP24 real cutoff, same constant]
 ```
 
-Section 10 of the article appears after its uses for exposition. Logically its scalar inequalities are LP05 and precede both determinant constructions. They use no box count, so there is no cycle. The detailed edge list and reverse consumers are in the generated map.
+Section 10 of the article appears after its uses for exposition. Logically its scalar inequalities are LP05 and precede both determinant constructions. They use no box count, so there is no cycle. The [dependency table](PROOF_MAP.md#forward-map-and-dependencies) lists the inputs and the later steps that use each result.
 
 ## LP00
 
 **Established external input.** A primitive integral homogeneous binary form $F$ of degree $3\le r\le11$, with nonzero discriminant, has at most $2800r^{1+\omega(|h|)}$ primitive signed integer solutions of $F(a,b)=h$ for $h\ne0$.
 
-**By.** Stewart, Theorem 1, printed p.795 and the $g=|h|$ specialization on p.796; see the [primary application ledger](../../../../docs/research/2026-10-15-p0365-triple-checked-v3/THUE_PRIMARY_APPLICATION.md). The formal interface expresses nonzero discriminant as separability of the rational affine section of full degree. It does not require irreducibility: the separable cubic used at LP03 may be reducible. This is one published input, not two separate “Stewart” and “Thue” assumptions. Its applications are proved locally; its proof is outside the selected scope.
+**By.** Stewart, Theorem 1, printed p.795 and the $g=|h|$ specialization on p.796; see the [published theorem and specialization](https://uwaterloo.ca/pure-mathematics/sites/default/files/uploads/documents/s0894-0347-1991-1119199-x_0.pdf#page=3). The formal interface expresses nonzero discriminant as separability of the rational affine section of full degree. It does not require irreducibility: the separable cubic used at LP03 may be reducible. This is one published input, not two separate “Stewart” and “Thue” assumptions. Its applications are proved locally; its proof is outside the selected scope.
 
-For the ledger's four-point bound at fixed nonzero signed levels, use the factor selection in §9.2 and [LP16](#lp16). Equal-degree factors must be nonproportional over $\mathbb Q$. For a linear factor $L$ and a quadratic factor $G$, the required condition is $G\notin\mathbb Q L^2$.
+For the four-point bound at fixed nonzero signed levels, use the factor selection in §9.2 and [LP16](#lp16). Equal-degree factors must be nonproportional over $\mathbb Q$. For a linear factor $L$ and a quadratic factor $G$, the required condition is $G\notin\mathbb Q L^2$.
 
 **Used by:** LP03 and LP17. No external Reuss theorem is used.
 
@@ -125,7 +125,7 @@ Since $x^m\le M\le2x^m$, each mixed term divided by $T^{28}$ is at most $2^{16}x
 
 ## LP07
 
-**Given:** a residual profile, one interval from LP06, and its actual finite sources. **Assert:** a rectangular integer evaluation matrix has all maximal square minors zero, with a uniformly bounded rectangle selected before the population.
+**Given:** a residual profile, one interval from LP06, and its actual finite sources. **Assert:** choose a uniformly bounded rectangle before the population. For its $H=(A+1)(C+1)$ columns (denoted $h$ in Proposition 4.2), every determinant formed from $H$ source rows and all $H$ columns vanishes. Thus the evaluation matrix has rank less than $H$, including when it has fewer than $H$ rows.
 
 **By, step 1 — weighted lattice inventory.** For natural exponent indices $i,j$, weights $a,b>0$ and threshold $t\ge0$, a finite positive-part summation gives
 $$\sum_{i<N,j<K}\max(0,t-ai-bj)\le(t+a+b)^3/(6ab).$$
@@ -154,7 +154,7 @@ and the square-root decay is at least $HC\sqrt{1+\sigma}\,T_{\log}$. Since $Cgc_
 
 **Given:** the actual integer rows of LP07. **Assert:** one nonzero integer polynomial vanishes at every point of the interval population, with degree $\le D$ and coefficient bound $Kx^N$, where $D,N,K$ are uniform.
 
-**By.** Among nonsingular matrices completed with actual rows and standard unit rows, maximize the number of actual rows. At least one unit row remains, since every all-actual maximal minor is zero. Its nonzero adjugate column annihilates every actual row: otherwise replacement would increase the maximal number. Cofactors are bounded by $(H-1)!L_{\rm entry}^{H-1}$. Distinct rectangular monomials turn the nonzero coefficient vector into a nonzero polynomial. Empty populations, duplicate rows and every smaller rank are covered.
+**By.** Among nonsingular matrices completed with actual rows and standard unit rows, maximize the number of actual rows. At least one unit row remains, since a determinant using $H$ actual rows and all $H$ columns vanishes. Its nonzero adjugate column annihilates every actual row: otherwise replacement would increase the maximal number. Cofactors are bounded by $(H-1)!L_{\rm entry}^{H-1}$. Distinct rectangular monomials turn the nonzero coefficient vector into a nonzero polynomial. Empty populations, duplicate rows and every smaller rank are covered.
 
 Choose $D=A_{\max}+C$, $H_{\max}=(A_{\max}+1)(C+1)$ and $N=D(H_{\max}-1)$. The actual entries are at most $(3x)^D$, so $K=(H_{\max}-1)!3^N$ suffices. The polynomial may depend on the population; these bounds do not. The dependency display following Proposition 4.2 orders these choices together with LP09–LP13: fixed $\delta$, finite rectangle range and constants, coarse/factor bounds, witness exponent and prime-list length, then one maximum threshold, all before varying boxes and populations. The rectangle varies only within that finite range; the polynomial may vary with the population. Prime values later vary with $T$, while their number and size multiples stay fixed. Uniformity is for fixed positive slack, with no assertion uniform as $\varepsilon\downarrow0$.
 
@@ -202,7 +202,7 @@ $$\Delta_D=(\prod_i d_i^3u_i)\alpha^{18}\det(r_D)_i,\qquad
 \Delta_I=(\prod_i d_i u_i^3)\alpha^{22}\det(r_I)_i.$$
 The inverse generic scale is $\alpha^{3/2}$, whose column product is $(\alpha^{3/2})^{44/3}=\alpha^{22}$. The source equation gives $w_I^6=(s/\alpha)^3(1+1/n)$. Since $1\le M\le x\le n$, both chart nodes lie in $[1,1+1/M]\subset[1,2]$; both errors have absolute value at most $8/x$. Thus the same original cover supplies both compact chart ranges, including closed endpoints.
 
-The exported `CF11ActualIntervalNodes` target records $1\le w\le2$ and $w\le1+3/M$, which suffice for the determinant estimate with a fixed constant. The local `hnodes` argument in `actual_interval_nodes` proves the sharper $1+1/M$ bound before relaxing it; this is a [sufficient formal variant](COVERAGE.md#sufficient-formal-variants), not a separate exported sharper theorem.
+The exported `CF11ActualIntervalNodes` target records $1\le w\le2$ and $w\le1+3/M$, which suffice for the determinant estimate with a fixed constant. The local `hnodes` argument in `actual_interval_nodes` proves the sharper $1+1/M$ bound before relaxing it. The [verification supplement](SUPPLEMENT.md) records both bounds.
 
 **By, step 2 — bound the normalized determinant.** A mixed determinant with $k$ error rows is divisible by the node differences within the main-row and error-row groups. Their number is $\binom{8-k}{2}+\binom{k}{2}$, giving the five orders in LP05. Error rows occupy four columns, so terms with at least five error rows vanish. No derivatives of a row-dependent error function are assumed.
 
@@ -212,7 +212,7 @@ The two clearing-scale calculations displayed in [§6.1](MANUSCRIPT.md#real-boun
 
 **Given:** LP05, LP11 and LP12. **Assert:** one nonzero integer relation of bidegree at most $(3,1)$ or $(1,3)$, with coefficients bounded by $x^{14}$, holds for every member of the class.
 
-**By.** A uniform threshold makes $5C_2\,2^{16}x^{-25\delta}<1$, so $|\Delta|<T^{28}\le p^{28}$. Divisibility and size concern the same original determinant; hence every eight-row minor is zero. Apply the maximal actual/unit completion argument from LP08 with eight columns; the [integer relation lemma in Proposition 4.2](MANUSCRIPT.md#proposition-42--specialized-internal-producer) gives its ordinary proof, including why every further row is annihilated. The actual row height is at most $9x^{11/6}$, so the cofactor bound is $7!9^7x^{77/6}\le x^{14}$ above one threshold. This includes empty classes, repeated rows, lower ranks and fewer than eight points. The relation is chosen before all class members, not fitted separately to each tuple.
+**By.** A uniform threshold makes $5C_2\,2^{16}x^{-25\delta}<1$, so $|\Delta|<T^{28}\le p^{28}$. Divisibility and size concern the same original determinant; hence every eight-row minor is zero. Apply the maximal actual/unit completion argument from LP08 with eight columns; the [integer relation lemma in Proposition 4.2](MANUSCRIPT.md#proposition-42--specialized-internal-producer) gives its ordinary proof, including why every further row is annihilated. The actual row height is at most $9x^{11/6}$, so the cofactor bound is $7!9^7x^{77/6}\le x^{14}$ above one threshold. This includes empty classes, repeated rows, lower ranks and fewer than eight points. After the class population has been fixed, one relation annihilates every member. Different populations may give different relations.
 
 ## LP14
 
@@ -275,11 +275,11 @@ The locally proved divisor subpower estimate, with exponent $\eta/720$ before th
 
 ## LP20
 
-**Given:** one original interval and all its coarse factors. **Assert:** its starts cost $O(Tx^\eta)$; the residual box costs $O(MTx^\eta)$, hence also the manuscript's weaker $O(MTx^\eta+M)$.
+**Given:** $0<\delta\le1$, one original interval and all its coarse factors. **Assert:** its starts cost $O(Tx^\eta)$; the residual box costs $O(MTx^\eta)$, hence also the manuscript's weaker $O(MTx^\eta+M)$.
 
 **By.** LP09 pays boundedly many singular points; LP10 supplies $O(T)$ smooth labels, each paid by LP19. Since $T\ge1$, $x\ge1$, absorb the singular constant into $Tx^\eta$. There are boundedly many factors and at most $4M$ intervals by LP06. LP08 supplies a polynomial for every actual interval population, so no existence premise remains. Exact $MT=x^{\theta+\delta}$ then gives $O(x^{\theta+\delta+\eta})$.
 
-The old `PaperTargets/IntervalCounts.lean` introductory comment calls the coarse producer and aggregation “still-open”. That is a historical status comment in hash-pinned source, superseded by the actual `GenericCoarse`, `BoxCounts` and `GlobalCounts` producers linked in the map. Its bytes are preserved with the native evidence; it is not a mathematical premise or a current gap.
+The [declaration index](PROOF_MAP.md#reverse-declaration-index) locates the coarse producer in `GenericCoarse`, the box count in `BoxCounts` and the shell and final counts in `GlobalCounts`. The opening comment in `PaperTargets/IntervalCounts.lean` describes an earlier stage of development.
 
 ## LP21
 
@@ -318,4 +318,4 @@ The old `PaperTargets/IntervalCounts.lean` introductory comment calls the coarse
 | One good prime for every point, or one relation for a selected tuple | Insufficient. LP10 assigns primes source by source; LP13 obtains one relation for the entire fixed class. |
 | Fixed polylogarithmic bound from an arbitrary power loss | Not established. No problem closure, novelty or publication decision follows. |
 
-The six missing historical figure assets and their old captions are not premises. The current dependency diagram is sourced by the map below this companion; it does not reconstruct or endorse those missing historical figures. All 78 historical nodes and 12 joins keep their individual dispositions in the map rather than being reclassified as 90 proved literal statements.
+The [historical bindings and joins](PROOF_MAP.md#historical-bindings-and-joins) record the individual dispositions of 78 earlier nodes and 12 joins, including the alternatives replaced by the selected proof.

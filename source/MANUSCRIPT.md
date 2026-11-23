@@ -44,13 +44,13 @@ Erdős records Mahler's observation that the positive solutions of $x^2-8y^2=1$ 
 
 The square–cube representation in §2 bounds the number of powerful integers up to $X$ by $\sum_{b\ge1}\sqrt{X/b^3}\ll X^{1/2}$. For pairs at positive shift $\ell$, Chan gives the bounds $O(d_3(\ell)X^{2/5}(\log X)^2)$ and $O_\ell(X^{7/19}\log X)$, where $d_3(\ell)$ counts ordered triples of positive integers with product $\ell$ [3, Theorems 3–4]. The fixed-fibre Pell and Thue counts already enter Chan's argument. Blomer and Schöbel obtain the exponent $61/180$ with arbitrary positive loss for squarefull pairs at fixed nonzero difference [9, Theorem 3]. Their cutoff on both endpoints amounts to shifting $X$ by one at difference one.
 
-At shift one, Reuss gives $S(X)\ll_\varepsilon X^{29/100+\varepsilon}$ [1, Theorem 4], using the approximate determinant method developed by Heath-Brown [5]. Wongcharoenbhorn and Meemark use a determinant-to-Thue step for squarefull values of special quadratic polynomials, including $t^2+\alpha^2$, which gives pairs with a square endpoint [10]. Here the first determinant applies to actual finite sources in each interval, the second combines real and modular estimates, and the count covers every graph and ruling branch for all positive starts. The improvement over the exponent in Reuss's Theorem 4 is $73/1400$.
+At shift one, Reuss gives $S(X)\ll_\varepsilon X^{29/100+\varepsilon}$ [1, Theorem 4], using the approximate determinant method developed by Heath-Brown [5]. Wongcharoenbhorn and Meemark use a determinant-to-Thue step for squarefull values of special quadratic polynomials, including $t^2+\alpha^2$ [10]. At $\alpha=1$, a squarefull value gives the consecutive pair $(t^2,t^2+1)$. Here the first determinant applies to actual finite sources in each interval, the second combines real and modular estimates, and the count covers every graph and ruling branch for all positive starts. The improvement over the exponent in Reuss's Theorem 4 is $73/1400$.
 
 A contemporary preprint by Danny Plymesser, *Counting powerful products of consecutive integers* [11], publicly listed on 19 November 2026, obtains the exponent $1/4+\varepsilon$ for consecutive powerful pairs. Its pair argument uses Reuss's lattice-reduced coordinates and a lifted-curve integral-point estimate; it also treats products of longer blocks of consecutive integers. The present argument differs in its internal rectangular coarse polynomial, its same-integer-minor real and modular comparison, and its resultant/Thue count of every graph and coordinate ruling. The exponent $333/1400$ improves $1/4$ by $17/1400$. We record this contemporaneous work without making a priority assertion.
 
 ## 1.1 Proof architecture
 
-Canonical sources first pay the two small-product complements. The remaining finite source population is covered by a common family of original ratio intervals. On each interval an internal rectangular determinant argument constructs a nonzero polynomial, whose irreducible factors supply the curves for source-wise good-prime assignment. A second determinant, using the same integer minor in its real and modular estimates, gives one relation for the entire selected smooth class. Every class is counted arithmetically. More explicitly, the argument (i) fixes canonical positive sources and pays small-product complements (§§2–3), (ii) constructs one uniformly bounded coarse polynomial per finite interval population (§4), (iii) assigns nonsingular sources to smooth prime-residue classes (§5), (iv) compares real and modular bounds on the same integer minor to obtain a full-class relation (§§6–7), (v) dispatches every graph and coordinate ruling by homogeneous resultants, Pell fibres and Stewart's Thue bound (§§8–9), and (vi) sums classes, boxes and shells with a controlled positive loss (§§10–12). The direct bidegree $(3,1)$ and inverse bidegree $(1,3)$ rows give alternative clearing factors $x^{4+6\psi}$ and $x^{12-14\psi}$: §6 selects the smaller bound, meeting at $\psi=2/5$. No proper-intersection/common-component dichotomy is used to reduce the class charge, and no general Reuss theorem is an external premise of this selected route.
+Sections 2–3 identify each start by two reduced ratios and count the two small-product complements. A common interval cover carries the remaining sources onto bounded-degree curves (§4). Each nonsingular source is assigned a good prime and a residue (§5). Within each resulting class, the direct and inverse charts give clearing factors $x^{4+6\psi}$ and $x^{12-14\psi}$. Choosing the smaller and applying the modular estimate to the same integer minor yields one relation on the whole class (§§6–7). The scales meet at $\psi=2/5$, where §10 gives the exponent. Sections 8–9 bound every graph and coordinate ruling in that relation. Summing these class bounds over intervals, boxes and shells gives Theorem 1.1 (§§11–12).
 
 # 2. Canonical sources and injection
 
@@ -96,7 +96,7 @@ $$
 (2n+1)^2-bd\,(2bduv)^2=1.
 $$
 
-Put $a=2n+1$ and $y=2Duv$. When $D$ is a square, the positive integers $a-\sqrt D\,y$ and $a+\sqrt D\,y$ have product one, which forces $y=0$ and rules out a source. Otherwise order the positive solutions by $a$. The units $a+y\sqrt D$ increase in that order. The quotient of two successive units is $r_0+s_0\sqrt D>1$ with $r_0,s_0\in\mathbb Z$ and norm one, since the inverse of an integral norm-one unit is its conjugate. Its conjugate is positive and less than one, so $s_0>0$ and $r_0>1$. Thus the next first coordinate is $r_0a+Ds_0y\ge2a$. The number of possible $a\le2N+1$ is at most (3.1), and $a$ determines the start. This covers all Pell returns. A fixed primitive ratio $b/d$ fixes $b,d$, hence $D$, and satisfies the same bound.
+The fibre $D=0$ is empty because $b,d>0$. For $D>0$ put $a=2n+1$ and $y=2Duv$. When $D$ is a square, the positive integers $a-\sqrt D\,y$ and $a+\sqrt D\,y$ have product one, which forces $y=0$ and rules out a source. Otherwise order the positive solutions by $a$. The units $a+y\sqrt D$ increase in that order. The quotient of two successive units is $r_0+s_0\sqrt D>1$ with $r_0,s_0\in\mathbb Z$ and norm one, since the inverse of an integral norm-one unit is its conjugate. Its conjugate is positive and less than one, so $s_0>0$ and $r_0>1$. Thus the next first coordinate is $r_0a+Ds_0y\ge2a$. The number of possible $a\le2N+1$ is at most (3.1), and $a$ determines the start. This covers all Pell returns. A fixed primitive ratio $b/d$ fixes $b,d$, hence $D$, and satisfies the same bound.
 
 Summing over $D\le Y$ gives $Y(1+\lfloor\log_2(2N+1)\rfloor)$ for natural $Y$. In real shell notation, for each $\eta>0$ there is a uniform constant such that the starts $n\le2x$ with $bd\le Y$ cost
 
@@ -112,13 +112,13 @@ This also includes fractional and zero $Y$ by flooring. A small-product aggregat
 A fixed positive primitive ratio $v/u$ fixes $u,v$. The binary cubic
 
 $$
-v^2y^3-u^2z^3
+F(Z,W)=v^2 W^3-u^2 Z^3
 \tag{3.3}
 $$
 
-is content-one, full degree three and separable over the rationals because $u,v>0$ and $\gcd(u,v)=1$. Applied at level one, the precise Stewart input in Section 9 gives at most $2800\cdot3=8400$ primitive signed kernel pairs, hence at most 8400 original starts. The external statement permits separable reducible cubics, so no irreducibility restriction or separate reducible-case deletion is needed.
+has content one because $\gcd(u,v)=1$. Its affine section $F(Z,1)$ has degree three and is separable because $u,v>0$ and its only possible repeated root is zero, where its value is $v^2$. Equation (2.1) gives $F(b,d)=1$. Applied at this level, the precise Stewart input in Section 9 gives at most $2800\cdot3=8400$ primitive signed kernel pairs, hence at most 8400 original starts. The external statement permits separable reducible cubics, so no irreducibility restriction or separate reducible-case deletion is needed.
 
-Positive multiplier labels with $uv\le Y$ number at most $Y(1+\lfloor\log_2Y\rfloor)$ for natural $Y$. Indeed, each dyadic $u$-bin has at most $Y$ labels, and there are at most $1+\lfloor\log_2Y\rfloor$ bins. The zero case is empty. Thus the original starts with $uv\le Y$ cost at most $8400Y(1+\lfloor\log_2Y\rfloor)$. For real $0\le Y\le4x$ this is $O_\eta(Yx^\eta)$, uniformly for $x\ge32$.
+Positive multiplier labels with $uv\le Y$ number at most $Y(1+\lfloor\log_2Y\rfloor)$ for integers $Y\ge1$. Indeed, each dyadic $u$-bin has at most $Y$ labels, and there are at most $1+\lfloor\log_2Y\rfloor$ bins. For $Y=0$ there are no labels. For $Y\ge1$ the original starts with $uv\le Y$ cost at most $8400Y(1+\lfloor\log_2Y\rfloor)$. For real $0\le Y\le4x$ this is $O_\eta(Yx^\eta)$, uniformly for $x\ge32$.
 
 ## 3.3 Residual boxes
 
@@ -367,7 +367,7 @@ $$
 \beta_{I,i}=w_{I,i}^2\bigl((1+1/n_i)^{-1/3}-1\bigr).
 $$
 
-These have signs $\beta_{D,i}\ge0$, $\beta_{I,i}\le0$ and absolute value at most $8/x$. Both charts thus use the same original intervals. In either chart write the normalized row as $r_0(w)+\beta r_1(w)$, with $r_1$ supported on the last four columns. By multilinearity choose the $k$ error rows and take out their $\beta$ factors. The remaining determinant is a polynomial alternating in the nodes of the $8-k$ smooth rows and separately alternating in the nodes of the $k$ error rows. It vanishes when two nodes within either block coincide. The distinct linear differences within the two blocks therefore divide it as a product. The quotient polynomial is bounded on $[1,2]^8$, uniformly over the finitely many row choices and both charts. Because the nodes lie in an interval of width $1/M$, this product gives the powers
+For finite sources their signs are $\beta_{D,i}>0$, $\beta_{I,i}<0$ and absolute value at most $8/x$. Both charts thus use the same original intervals. In either chart write the normalized row as $r_0(w)+\beta r_1(w)$, with $r_1$ supported on the last four columns. By multilinearity choose the $k$ error rows and take out their $\beta$ factors. The remaining determinant is a polynomial alternating in the nodes of the $8-k$ smooth rows and separately alternating in the nodes of the $k$ error rows. It vanishes when two nodes within either block coincide. The distinct linear differences within the two blocks therefore divide it as a product. The quotient polynomial is bounded on $[1,2]^8$, uniformly over the finitely many row choices and both charts. Because the nodes lie in an interval of width $1/M$, this product gives the powers
 
 $$
 a_k=\binom{8-k}{2}+\binom{k}{2}\quad(0\le k\le4),
@@ -492,7 +492,7 @@ $$
 
 In the direct chart an original source gives $(Z,W)=(b,d)$. Its partner ratio $v/u=A(Z,W)/B(Z,W)$ is positive and reduced. Thus $(A(Z,W),B(Z,W))=\sigma g(v,u)$ for a common sign $\sigma=\pm1$. Substituting into (9.2) gives $H_D(b,d)=g^2(d^3v^2-b^3u^2)=g^2$. In the inverse chart $(Z,W)=(v,u)$ and the partner ratio is $b/d=A(Z,W)/B(Z,W)$. Now the same argument gives $(A(Z,W),B(Z,W))=\sigma g(b,d)$ and $H_I(v,u)=\sigma g^3(d^3v^2-b^3u^2)=\sigma g^3$. Primitivity of both original pairs follows from §2.
 
-Fix the polynomial $H=H_D$ or $H_I$ with the graph and chart. Let $c>0$ be its coefficient content, put $Q=H/c$, and write $h=Q(Z,W)$ at an original source. The source equation now gives
+Fix $H=H_D$ or $H_I$ with the graph and chart. An empty source fibre contributes zero. On a nonempty fibre the identity just proved gives a nonzero value of $H$, so its coefficient content $c$ is positive. Put $Q=H/c$ and write $h=Q(Z,W)$ at an original source. The source equation now gives
 
 $$
 g\mid|R|,\qquad c\mid g^\ell,\qquad
@@ -638,7 +638,7 @@ For fixed $\delta>0$ and $C_2$, one threshold makes the sum of all five terms, m
 
 # 11. Conservative interval and box inventory
 
-Fix $\delta>0$ and a desired positive class loss $\eta$. Coarse degree and height constants are fixed by Proposition 4.2. Every interval has boundedly many factors. For one factor, singular sources cost $O_\delta(1)$; the bounded prime union supplies $O_\delta(T)$ smooth classes; each class costs $O_\eta(x^\eta)$ by Sections 8–9. Hence the factor and interval costs are
+Fix $0<\delta\le1$ as in (4.1) and a class loss $\eta>0$. Coarse degree and height constants are fixed by Proposition 4.2. Every interval has boundedly many factors. For one factor, singular sources cost $O_\delta(1)$; the bounded prime union supplies $O_\delta(T)$ smooth classes; each class costs $O_\eta(x^\eta)$ by Sections 8–9. Hence the factor and interval costs are
 
 $$
 O_{\delta,\eta}(Tx^\eta+1).
@@ -680,7 +680,7 @@ For $X\ge1$, let $N=\lfloor X\rfloor\ge1$. Equation (1.2), $N\le X$ and $\theta+
 
 # 13. What the exponent measures
 
-The one-error term attains the maximum of the five-term envelope in §10 at $\psi=2/5$. Its angular order is sharp in the enlarged real model, where the error amplitudes are bounded and have the chart's sign, and zero amplitudes are allowed. Whether actual canonical-source classes attain this order or exhibit further cancellation remains open. Other covers and monomial sets may give different bounds. Sections 9–12 charge their positive losses to the final $\varepsilon$. Erdős's fixed-power logarithmic estimate remains open.
+The one-error term attains the maximum of the five-term envelope in §10 at $\psi=2/5$. Its angular order is sharp in the enlarged real model, where the error amplitudes are bounded and have the chart's sign, and zero amplitudes are allowed. At the selected prime scale, the full determinant already vanishes by §§6–7. The witness below isolates one error row. The seven unperturbed rows have zero error in the model, whereas the formulas for $\beta_{D,i}$ and $\beta_{I,i}$ in §6.1 give strictly signed errors for finite canonical sources. The witness therefore leaves open whether arithmetic improves the one-error estimate before modular vanishing. Other covers and monomial sets may give different bounds. Sections 9–12 charge their positive losses to the final $\varepsilon$. Erdős's fixed-power logarithmic estimate remains open.
 
 **An explicit enlarged-model witness.** Put $w_i=1+h\xi_i$ with fixed distinct $0\le\xi_0<\cdots<\xi_6\le1$, $0\le\xi_7\le1$ and $h\downarrow0$. Set the first seven error amplitudes to zero and the eighth to a nonzero allowed amplitude $\lambda$ (positive directly, negative inversely). This is a choice in the enlarged analytic model, not a construction of canonical sources. For the ordered smooth exponents
 
@@ -694,11 +694,11 @@ Indeed, expanding the seven smooth rows in powers of $h$, a nonzero determinant 
 
 $$h^{21}\!\left(\prod_{0\le i<j\le6}(\xi_j-\xi_i)\right)\det J_e+O(h^{22}),$$
 
-which is nonzero to order 21. All rows are fixed polynomials on a compact node range, so this remainder follows directly from their finite expansions. The order is thus attained in the enlarged model.
+which is nonzero to order 21. All rows are fixed polynomials on a compact node range, so this remainder follows directly from their finite expansions. Taking $\xi_7=\xi_0$ makes the all-smooth determinant zero. For any fixed admissible $\lambda\ne0$, the full determinant then has this nonzero leading term multiplied by $\lambda$, realizing order 21 in the enlarged model.
 
 # 14. Formal correspondence and remaining acceptance
 
-The Lean developments include `original_shell_source_count`, `natural_pair_count` and `real_pair_count` in the namespace `P0365Subquarter`. Each takes the quantitative Thue bound (9.4) as the explicit premise `StewartPrimitiveThue`. On 23 November 2026, all 35 predeclared controls qualified and an independently operated clean Linux replay returned `COMPLETE / PASS`. The run reconciled the exports from 152 candidate and 44 reference modules, passed all six checkers, completed strict whole-export and target-transitive axiom audits, and matched fourteen theorem interfaces and four protected definition bodies with no definition holes. The formal result proves the counting bounds given the stated premise. The ordinary argument invokes Stewart's published theorem to supply it. Independent specialist mathematical review remains pending. The [supplement](SUPPLEMENT.md) records the exact scope, including the common-constant witness.
+The Lean developments include `original_shell_source_count`, `natural_pair_count` and `real_pair_count` in the namespace `P0365Subquarter`. Each takes the quantitative Thue bound (9.4) as the explicit premise `StewartPrimitiveThue`. On 23 November 2026, all 35 predeclared controls qualified and an independently operated clean Linux replay returned `COMPLETE / PASS`. The run reconciled the exports from 152 candidate and 44 reference modules, passed all six checkers, completed strict whole-export and target-transitive axiom audits, and matched fourteen theorem interfaces and four protected definition bodies with no definition holes. The formal result proves the counting bounds given the stated premise. The ordinary argument invokes Stewart's published theorem to supply it. The [supplement](SUPPLEMENT.md) records the exact scope, including the common-constant witness.
 
 AI systems assisted the mathematical research, Lean formalization, manuscript preparation and critique. The author is responsible for the mathematical claims. Independent specialist review remains pending.
 
@@ -713,5 +713,5 @@ AI systems assisted the mathematical research, Lean formalization, manuscript pr
 7. P. Erdős and R. L. Graham, *Old and New Problems and Results in Combinatorial Number Theory*, Monographie de L'Enseignement Mathématique 28, 1980, p. 68. [Monograph](https://mathweb.ucsd.edu/~ronspubs/80_11_number_theory.pdf#page=64).
 8. D. T. Walker, *Consecutive integer pairs of powerful numbers and related Diophantine equations*, The Fibonacci Quarterly 14 (1976), 111–116. [Journal article](https://fq.math.ca/Scanned/14-2/walker.pdf).
 9. V. Blomer and A. Schöbel, *Twins of powerful numbers*, Functiones et Approximatio Commentarii Mathematici 49 (2013), 349–356, Theorem 3. [DOI 10.7169/facm/2013.49.2.12](https://doi.org/10.7169/facm/2013.49.2.12).
-10. W. Wongcharoenbhorn and Y. Meemark, *Square-full values of quadratic polynomials*, Bulletin of the Australian Mathematical Society. [DOI 10.1017/S0004972725000255](https://doi.org/10.1017/S0004972725000255) · [Author preprint](https://arxiv.org/abs/2405.06968v2).
+10. W. Wongcharoenbhorn and Y. Meemark, *Square-full values of quadratic polynomials*, Bulletin of the Australian Mathematical Society 113 (2026), 40–54. [DOI 10.1017/S0004972725000255](https://doi.org/10.1017/S0004972725000255) · [Author preprint](https://arxiv.org/abs/2405.06968v2).
 11. D. Plymesser, *Counting powerful products of consecutive integers*, Hexagon preprint `hexagon:2611.00602v1` (public version listed 19 November 2026). [Preprint landing page](https://hexagonmath.org/2611.00602v1).
