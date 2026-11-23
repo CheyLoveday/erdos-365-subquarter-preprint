@@ -245,13 +245,13 @@ The exported `CF11ActualIntervalNodes` target records $`1\le w\le2`$ and $`w\le1
 
 **By, step 2 — bound the normalized determinant.** A mixed determinant with $`k`$ error rows is divisible by the node differences within the main-row and error-row groups. Their number is $`\binom{8-k}{2}+\binom{k}{2}`$, giving the five orders in LP05. Error rows occupy four columns, so terms with at least five error rows vanish. No derivatives of a row-dependent error function are assumed.
 
-The two clearing-scale calculations displayed in [§6.1](subquarter-preprint.pdf#page=17) substitute $`U=x^{1/2}B^{-3/2}`$ into $`E^{24}U^8(B/E)^{18}`$ and $`E^8U^{24}(B/E)^{22}`$, giving $`x^4P^6`$ and $`x^{12}/P^{14}`$; taking the better chart produces $`x^W`$. Both charts inherit bounded nodes from the original interval. All fixed factors enter $`C_2`$ uniformly; neither bounded skew nor a second interval family is needed.
+The two clearing-scale calculations displayed in [§6.1 (PDF p. 9)](subquarter-preprint.pdf) substitute $`U=x^{1/2}B^{-3/2}`$ into $`E^{24}U^8(B/E)^{18}`$ and $`E^8U^{24}(B/E)^{22}`$, giving $`x^4P^6`$ and $`x^{12}/P^{14}`$; taking the better chart produces $`x^W`$. Both charts inherit bounded nodes from the original interval. All fixed factors enter $`C_2`$ uniformly; neither bounded skew nor a second interval family is needed.
 
 ## LP13
 
 **Given:** LP05, LP11 and LP12. **Assert:** one nonzero integer relation of bidegree at most $`(3,1)`$ or $`(1,3)`$, with coefficients bounded by $`x^{14}`$, holds for every member of the class.
 
-**By.** A uniform threshold makes $`5C_2\,2^{16}x^{-25\delta}<1`$, so $`|\Delta|<T^{28}\le p^{28}`$. Divisibility and size concern the same original determinant; hence every eight-row minor is zero. Apply the maximal actual/unit completion argument from LP08 with eight columns; the [integer relation lemma in Proposition 4.2](subquarter-preprint.pdf#page=5) gives its ordinary proof, including why every further row is annihilated. The actual row height is at most $`9x^{11/6}`$, so the cofactor bound is $`7!9^7x^{77/6}\le x^{14}`$ above one threshold. This includes empty classes, repeated rows, lower ranks and fewer than eight points. The relation is chosen before all class members, not fitted separately to each tuple.
+**By.** A uniform threshold makes $`5C_2\,2^{16}x^{-25\delta}<1`$, so $`|\Delta|<T^{28}\le p^{28}`$. Divisibility and size concern the same original determinant; hence every eight-row minor is zero. Apply the maximal actual/unit completion argument from LP08 with eight columns; the [integer relation lemma in Proposition 4.2 (PDF p. 5)](subquarter-preprint.pdf) gives its ordinary proof, including why every further row is annihilated. The actual row height is at most $`9x^{11/6}`$, so the cofactor bound is $`7!9^7x^{77/6}\le x^{14}`$ above one threshold. This includes empty classes, repeated rows, lower ranks and fewer than eight points. The relation is chosen before all class members, not fitted separately to each tuple.
 
 ## LP14
 

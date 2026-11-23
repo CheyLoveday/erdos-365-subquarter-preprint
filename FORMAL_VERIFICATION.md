@@ -112,8 +112,9 @@ The independent reference, raw execution records and private reviews remain
 in private custody. The public evidence gives their receipt and content
 identities. [Verification data](verification.json)
 
-Generate fresh reading files using Pandoc 3.9.0.2, Tectonic 0.16.9 and the
-prepared Tectonic v33 bundle cache.
+Generate fresh reading files using Pandoc 3.9.0.2, Tectonic 0.16.9, the
+prepared Tectonic v33 bundle cache and Poppler’s `pdftotext`. The renderer
+reads the cited page numbers from the PDF it just built.
 
 ```sh
 python3 -B render.py --out-dir /tmp/subquarter-reading
