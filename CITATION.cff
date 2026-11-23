@@ -5,6 +5,7 @@ authors:
   - family-names: Loveday
     given-names: Chey
 date-released: "2026-11-23"
+version: "1.0.0-preprint"
 url: "https://github.com/CheyLoveday/erdos-365-subquarter-preprint"
 preferred-citation:
   type: unpublished
@@ -15,4 +16,4 @@ preferred-citation:
   year: 2026
   month: 11
   url: "https://github.com/CheyLoveday/erdos-365-subquarter-preprint"
-  notes: "GitHub preprint dated 23 November 2026. Cite the exact repository commit."
+  notes: "GitHub preprint v1.0.0-preprint, dated 23 November 2026. Cite the exact repository commit."

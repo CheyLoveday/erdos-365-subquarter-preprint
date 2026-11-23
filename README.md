@@ -15,7 +15,7 @@ quantitative Thue theorem. Erdős’s fixed-polylogarithmic question remains ope
 ## Start here
 
 - [Read the preprint (PDF)](subquarter-preprint.pdf)
-- [Follow the mathematical proof in the Lamport notes](PROOF_NOTES.md)
+- [Follow the proof in the Lamport notes](PROOF_NOTES.md), starting with the [dependency map](PROOF_NOTES.md#dependency-map)
 - [See exactly what Lean and odProof verified](FORMAL_VERIFICATION.md)
 - [Browse the checked Lean candidate](lean)
 
@@ -37,7 +37,8 @@ hashes. [Reproduction instructions](FORMAL_VERIFICATION.md#reproduction)
 ## Citation and rights
 
 Chey Loveday. *A Subquarter Exponent for Consecutive Powerful Numbers*.
-GitHub preprint, 23 November 2026. Cite the exact repository commit.
+GitHub preprint, 23 November 2026. Cite the exact repository commit for this
+edition. [Release v1.0.0-preprint](https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/v1.0.0-preprint)
 
 Copyright © 2026 Chey Loveday. No additional reuse licence is granted.
 The paper and Lean formalization involved AI assistance, as described in

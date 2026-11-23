@@ -143,14 +143,28 @@ def render_proof_notes(out):
     goal = next(i for i, row in enumerate(parsed["blocks"])
                 if row.get("t") == "Header" and row["c"][1][0] == "goal-and-quantifier-discipline")
     doc = dict(parsed, blocks=parsed["blocks"][goal:], meta={})
+    # GitHub's PDF viewer opens at the first page. Locate the cited passages
+    # in the freshly typeset paper so the visible labels follow its pagination.
+    pdf_text = run(["pdftotext", "-layout", str(out / "subquarter-preprint.pdf"), "-"])
+    pages = [" ".join(page.split()) for page in pdf_text.split("\f")]
+    pdf_passages = {
+        "MANUSCRIPT.md#proposition-42--specialized-internal-producer": "Integer relation lemma (also used in Section 7)",
+        "MANUSCRIPT.md#real-bound": "the two positive prefactors satisfy",
+    }
+    for link in nodes(doc["blocks"], "Link"):
+        passage = pdf_passages.get(link["c"][2][0])
+        if passage is not None:
+            matches = [number for number, page in enumerate(pages, 1) if passage in page]
+            if len(matches) != 1:
+                raise ValueError(f"Expected one PDF page for {passage!r}, found {matches}")
+            link["c"][1].extend([{"t": "Space"}, {"t": "Str", "c": f"(PDF p. {matches[0]})"}])
     converted, links = rewrite(doc, {
         "../../../../docs/research/2026-10-15-p0365-triple-checked-v3/THUE_PRIMARY_APPLICATION.md":
             "FORMAL_VERIFICATION.md#stewarts-theorem",
         "COVERAGE.md": "FORMAL_VERIFICATION.md",
         "COVERAGE.md#sufficient-formal-variants": "FORMAL_VERIFICATION.md#formal-variants",
         "MANUSCRIPT.md": "subquarter-preprint.pdf",
-        "MANUSCRIPT.md#proposition-42--specialized-internal-producer": "subquarter-preprint.pdf#page=5",
-        "MANUSCRIPT.md#real-bound": "subquarter-preprint.pdf#page=17",
+        **dict.fromkeys(pdf_passages, "subquarter-preprint.pdf"),
     })
     content = run(["pandoc", "--sandbox", "-f", "json", "-t", "gfm+tex_math_dollars", "--wrap=none"],
                   data=json.dumps(github_math(converted), ensure_ascii=False))
