@@ -1,0 +1,72 @@
+import PaperTargets.Pilot
+import PaperTargets.CanonicalSource
+import PaperTargets.LegacyCorrespondence
+import PaperTargets.SmallKernels
+import PaperTargets.CutoffControls
+import PaperTargets.ExactProfiles
+import PaperTargets.RoundedProfiles
+import PaperTargets.PrimeAssignment
+import PaperTargets.SmoothSources
+import PaperTargets.RealSources
+import PaperTargets.DividedMinors
+import PaperTargets.ClassRelations
+
+import PaperTargets.GraphRulings
+
+import PaperTargets.HomogeneousResultants
+
+import PaperTargets.SourceRecovery
+import PaperTargets.PullbackGeometry
+import PaperTargets.PullbackNonpowers
+import PaperTargets.LowFactorLevels
+import PaperTargets.ResultantDivisors
+import PaperTargets.PrimitiveFactors
+import PaperTargets.FactorDispatch
+import PaperTargets.DivisorGrowth
+import PaperTargets.ThueLevels
+import PaperTargets.SourceCounts
+import PaperTargets.RulingCounts
+
+import PaperTargets.ClassCounts
+
+import PaperTargets.SmallMultipliers
+
+import PaperTargets.CoarseFactors
+
+import PaperTargets.ShellPrimes
+
+import PaperTargets.FactorInventory
+
+import PaperTargets.SingularCounts
+
+import PaperTargets.IntervalCounts
+
+import PaperTargets.SmallKernelScale
+
+import PaperTargets.IntervalCover
+
+import PaperTargets.EndpointRelations
+
+import PaperTargets.ResidualProfiles
+
+import PaperTargets.ReussLogScale
+
+import PaperTargets.UpperHeightSources
+
+import PaperTargets.WeightedMonomials
+
+import PaperTargets.RootColumns
+
+import PaperTargets.MonomialDeterminants
+
+import PaperTargets.RootDeterminants
+
+import PaperTargets.HeightDeterminants
+
+import PaperTargets.UniformRectangles
+
+import PaperTargets.GenericCoarse
+
+import PaperTargets.BoxCounts
+
+import PaperTargets.GlobalCounts

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you cite this preprint, include its date and exact repository commit."
+title: "A Subquarter Exponent for Consecutive Powerful Numbers"
+authors:
+  - family-names: Loveday
+    given-names: Chey
+date-released: "2026-11-23"
+url: "https://github.com/CheyLoveday/erdos-365-subquarter-preprint"
+preferred-citation:
+  type: unpublished
+  title: "A Subquarter Exponent for Consecutive Powerful Numbers"
+  authors:
+    - family-names: Loveday
+      given-names: Chey
+  year: 2026
+  month: 11
+  url: "https://github.com/CheyLoveday/erdos-365-subquarter-preprint"
+  notes: "GitHub preprint dated 23 November 2026. Cite the exact repository commit."

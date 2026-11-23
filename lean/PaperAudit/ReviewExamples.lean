@@ -1,0 +1,78 @@
+import PaperProofs.ReviewExamples
+
+set_option pp.all true
+#check P0365Subquarter.ReviewExamples.source8
+#check P0365Subquarter.ReviewExamples.source288
+#check P0365Subquarter.ReviewExamples.source288_same_endpoint_overlap
+#check P0365Subquarter.ReviewExamples.degree8
+#check P0365Subquarter.ReviewExamples.degree288
+#check P0365Subquarter.ReviewExamples.coprime8
+#check P0365Subquarter.ReviewExamples.coprime288
+#check P0365Subquarter.ReviewExamples.negative_coprime_graphs
+#check P0365Subquarter.ReviewExamples.branch8
+#check P0365Subquarter.ReviewExamples.branch8_negative
+#check P0365Subquarter.ReviewExamples.branch288
+#check P0365Subquarter.ReviewExamples.branch288_negative
+#check P0365Subquarter.ReviewExamples.full_resultant8
+#check P0365Subquarter.ReviewExamples.full_resultant288
+#check P0365Subquarter.ReviewExamples.affine_resultant288
+#check P0365Subquarter.ReviewExamples.values8
+#check P0365Subquarter.ReviewExamples.values288
+#check P0365Subquarter.ReviewExamples.gcd8
+#check P0365Subquarter.ReviewExamples.gcd288
+#check P0365Subquarter.ReviewExamples.full_versus_affine288
+#check P0365Subquarter.ReviewExamples.negative_gcds
+#check P0365Subquarter.ReviewExamples.negative_resultants
+#check P0365Subquarter.ReviewExamples.pullback8
+#check P0365Subquarter.ReviewExamples.pullback288
+#check P0365Subquarter.ReviewExamples.pullback_value8
+#check P0365Subquarter.ReviewExamples.pullback_value288
+#check P0365Subquarter.ReviewExamples.content8
+#check P0365Subquarter.ReviewExamples.content288
+#check P0365Subquarter.ReviewExamples.content8_corrected_divisibility
+#check P0365Subquarter.ReviewExamples.content8_negative
+#check P0365Subquarter.ReviewExamples.content288_negative
+#check P0365Subquarter.ReviewExamples.reduced_level8
+#check P0365Subquarter.ReviewExamples.reduced_level8_negative
+#check P0365Subquarter.ReviewExamples.reduced_level288
+#check P0365Subquarter.ReviewExamples.reduced_level288_negative
+#check P0365Subquarter.ReviewExamples.actual_signed_recoveries
+#check P0365Subquarter.ReviewExamples.nonadmitted_parameter
+set_option pp.all false
+#print axioms P0365Subquarter.ReviewExamples.source8
+#print axioms P0365Subquarter.ReviewExamples.source288
+#print axioms P0365Subquarter.ReviewExamples.source288_same_endpoint_overlap
+#print axioms P0365Subquarter.ReviewExamples.degree8
+#print axioms P0365Subquarter.ReviewExamples.degree288
+#print axioms P0365Subquarter.ReviewExamples.coprime8
+#print axioms P0365Subquarter.ReviewExamples.coprime288
+#print axioms P0365Subquarter.ReviewExamples.negative_coprime_graphs
+#print axioms P0365Subquarter.ReviewExamples.branch8
+#print axioms P0365Subquarter.ReviewExamples.branch8_negative
+#print axioms P0365Subquarter.ReviewExamples.branch288
+#print axioms P0365Subquarter.ReviewExamples.branch288_negative
+#print axioms P0365Subquarter.ReviewExamples.full_resultant8
+#print axioms P0365Subquarter.ReviewExamples.full_resultant288
+#print axioms P0365Subquarter.ReviewExamples.affine_resultant288
+#print axioms P0365Subquarter.ReviewExamples.values8
+#print axioms P0365Subquarter.ReviewExamples.values288
+#print axioms P0365Subquarter.ReviewExamples.gcd8
+#print axioms P0365Subquarter.ReviewExamples.gcd288
+#print axioms P0365Subquarter.ReviewExamples.full_versus_affine288
+#print axioms P0365Subquarter.ReviewExamples.negative_gcds
+#print axioms P0365Subquarter.ReviewExamples.negative_resultants
+#print axioms P0365Subquarter.ReviewExamples.pullback8
+#print axioms P0365Subquarter.ReviewExamples.pullback288
+#print axioms P0365Subquarter.ReviewExamples.pullback_value8
+#print axioms P0365Subquarter.ReviewExamples.pullback_value288
+#print axioms P0365Subquarter.ReviewExamples.content8
+#print axioms P0365Subquarter.ReviewExamples.content288
+#print axioms P0365Subquarter.ReviewExamples.content8_corrected_divisibility
+#print axioms P0365Subquarter.ReviewExamples.content8_negative
+#print axioms P0365Subquarter.ReviewExamples.content288_negative
+#print axioms P0365Subquarter.ReviewExamples.reduced_level8
+#print axioms P0365Subquarter.ReviewExamples.reduced_level8_negative
+#print axioms P0365Subquarter.ReviewExamples.reduced_level288
+#print axioms P0365Subquarter.ReviewExamples.reduced_level288_negative
+#print axioms P0365Subquarter.ReviewExamples.actual_signed_recoveries
+#print axioms P0365Subquarter.ReviewExamples.nonadmitted_parameter

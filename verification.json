@@ -1,0 +1,362 @@
+{
+  "acquisition_sha256": "51ace3c930cc3fec3e2d5076f672176c101cd2f5b7186ce8f57e0f954615045f",
+  "candidate_export_sha256": "bb197c76c2d8ee61479b8d1a0c287e187d1cd5b056a34c1233783e5452a79790",
+  "candidate_source_archive_sha256": "0595c5c731ff97f8d0ec38676252825fb77071e3dabe9d28dffa1cc72fe104f4",
+  "checker_outcomes": [
+    {
+      "cleanup_confirmed": true,
+      "complete": true,
+      "name": "leanchecker",
+      "returncode": 0,
+      "stage": "PASS"
+    },
+    {
+      "cleanup_confirmed": true,
+      "complete": true,
+      "name": "leanchecker-paranoid",
+      "returncode": 0,
+      "stage": "PASS"
+    },
+    {
+      "cleanup_confirmed": true,
+      "complete": true,
+      "name": "lean4lean",
+      "returncode": 0,
+      "stage": "PASS"
+    },
+    {
+      "cleanup_confirmed": true,
+      "complete": true,
+      "name": "nanoda",
+      "returncode": 0,
+      "stage": "PASS"
+    },
+    {
+      "cleanup_confirmed": true,
+      "complete": true,
+      "name": "con-leche",
+      "returncode": 0,
+      "stage": "PASS"
+    },
+    {
+      "cleanup_confirmed": true,
+      "complete": true,
+      "name": "con-ron",
+      "returncode": 0,
+      "stage": "PASS"
+    }
+  ],
+  "controls": [
+    {
+      "id": "K01",
+      "status": "PASS"
+    },
+    {
+      "id": "K02",
+      "status": "PASS"
+    },
+    {
+      "id": "S01",
+      "status": "PASS"
+    },
+    {
+      "id": "S02",
+      "status": "PASS"
+    },
+    {
+      "id": "S03",
+      "status": "PASS"
+    },
+    {
+      "id": "S04",
+      "status": "PASS"
+    },
+    {
+      "id": "S05",
+      "status": "PASS"
+    },
+    {
+      "id": "S06",
+      "status": "PASS"
+    },
+    {
+      "id": "S07",
+      "status": "PASS"
+    },
+    {
+      "id": "S08",
+      "status": "PASS"
+    },
+    {
+      "id": "S09",
+      "status": "PASS"
+    },
+    {
+      "id": "S10",
+      "status": "PASS"
+    },
+    {
+      "id": "A01",
+      "status": "PASS"
+    },
+    {
+      "id": "A02",
+      "status": "PASS"
+    },
+    {
+      "id": "A03",
+      "status": "PASS"
+    },
+    {
+      "id": "T01",
+      "status": "PASS"
+    },
+    {
+      "id": "T02",
+      "status": "PASS"
+    },
+    {
+      "id": "T03",
+      "status": "PASS"
+    },
+    {
+      "id": "T04",
+      "status": "PASS"
+    },
+    {
+      "id": "T05",
+      "status": "PASS"
+    },
+    {
+      "id": "T06",
+      "status": "PASS"
+    },
+    {
+      "id": "E01",
+      "status": "PASS"
+    },
+    {
+      "id": "E02",
+      "status": "PASS"
+    },
+    {
+      "id": "E03",
+      "status": "PASS"
+    },
+    {
+      "id": "E04",
+      "status": "PASS"
+    },
+    {
+      "id": "E05",
+      "status": "PASS"
+    },
+    {
+      "id": "E06",
+      "status": "PASS"
+    },
+    {
+      "id": "F01",
+      "status": "PASS"
+    },
+    {
+      "id": "F02",
+      "status": "PASS"
+    },
+    {
+      "id": "F03",
+      "status": "PASS"
+    },
+    {
+      "id": "F04",
+      "status": "PASS"
+    },
+    {
+      "id": "F05",
+      "status": "PASS"
+    },
+    {
+      "id": "B01",
+      "status": "PASS"
+    },
+    {
+      "id": "R1",
+      "status": "PASS"
+    },
+    {
+      "id": "R5",
+      "status": "PASS"
+    }
+  ],
+  "dependency_pins": [
+    [
+      "Cli",
+      "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
+    ],
+    [
+      "LeanSearchClient",
+      "d6b4c7be5be75ec4917c873ac50c756dc1436372"
+    ],
+    [
+      "Qq",
+      "dce0ad79c486cb1fb504af04f953c3466b0c6db8"
+    ],
+    [
+      "aesop",
+      "4a174c490d8707121c4a9290800489f105d85e07"
+    ],
+    [
+      "batteries",
+      "66e469188fe07963e5cf666c7d4433f45b8131c5"
+    ],
+    [
+      "importGraph",
+      "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93"
+    ],
+    [
+      "mathlib",
+      "56a005855ea17e0b0958f73ec801ae140b0a1679"
+    ],
+    [
+      "plausible",
+      "dfa4f38190d07c37e315953e08b90fe2d95b3c24"
+    ],
+    [
+      "proofwidgets",
+      "df72b022e558978a1c50264cfc4d7fec86fa8e04"
+    ]
+  ],
+  "edition_date": "2026-11-23",
+  "edition_manuscript_sha256": "f2ca5be15fa51d41619c6cb5421cb774f7ad67447eae60700e339125c1d17eb2",
+  "frozen_formal_input_commit": "331f8c3d4837a7bdc3c49f27441d7562eff7de24",
+  "maintained_lean_tree": "c7e6d4b6069d5f14182fbf145972631e42975c63",
+  "odproof_revision": "cecb980fe7c3c7573418027e3a7b05002fdda442",
+  "operator_role": "Separate AI-assisted A11 operator",
+  "paper_coverage": {
+    "candidate_lean_modules": 152,
+    "definition_holes": 0,
+    "external_premises": [
+      "P0365Subquarter.StewartPrimitiveThue"
+    ],
+    "protected_definition_bodies": [
+      "P0365Subquarter.CF18NaturalPairCount",
+      "P0365Subquarter.CF18OriginalShellSourceCount",
+      "P0365Subquarter.CF18RealPairCount",
+      "P0365Subquarter.StewartPrimitiveThue"
+    ],
+    "reference_lean_modules": 44,
+    "specialist_review": "PENDING",
+    "theorem_interfaces": [
+      "P0365Subquarter.original_shell_source_count",
+      "P0365Subquarter.natural_pair_count",
+      "P0365Subquarter.real_pair_count",
+      "P0365Subquarter.actual_graph_ruling_decomposition",
+      "P0365Subquarter.actual_source_resultant_level",
+      "P0365Subquarter.rounded_class_source_subpower",
+      "P0365Subquarter.irreducible_interval_source_count",
+      "P0365Subquarter.coarse_interval_source_count",
+      "P0365Subquarter.compact_box_source_count",
+      "P0365Subquarter.actual_box_source_count",
+      "P0365Subquarter.fixed_kernel_product_count",
+      "P0365Subquarter.fixed_kernel_ratio_count",
+      "P0365Subquarter.fixed_multiplier_ratio_count",
+      "P0365Subquarter.rounded_shell_source_assignment"
+    ]
+  },
+  "prepared_environment_digest": "3cd594fb399a49728757505c0ad8616b56e6e86b4bcbe375d0eeb51fc2e2e620",
+  "receipt_sha256": "c8ca1f69315cd18276ee0148fb4dfb3049b65930598b7dced2f1811c5d1d360b",
+  "reference_export_sha256": "97bc9d600ecfefa56656f72a3fb3e94fef90aae6731f95e20722766152b3d2e1",
+  "reference_source_archive_sha256": "8e23acf0528ef4599b6bcfcc9bccaf8972d31af1340d7856586face71c20e671",
+  "reviewed_manuscript_sha256": "d1f57b29e526ddd3ee1af30cfe41a668bd9861e35ec274f9047cec1152ddb35c",
+  "run_completion": "COMPLETE",
+  "target_transitive_axioms": {
+    "P0365SecondReview.joint_natural_real_constant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P0365SecondReview.selected_seam_budget_lower_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P0365Subquarter.actual_box_source_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P0365Subquarter.actual_graph_ruling_decomposition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P0365Subquarter.actual_source_resultant_level": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P0365Subquarter.coarse_interval_source_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P0365Subquarter.compact_box_source_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P0365Subquarter.fixed_kernel_product_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P0365Subquarter.fixed_kernel_ratio_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P0365Subquarter.fixed_multiplier_ratio_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P0365Subquarter.irreducible_interval_source_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P0365Subquarter.natural_pair_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P0365Subquarter.original_shell_source_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P0365Subquarter.real_pair_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P0365Subquarter.rounded_class_source_subpower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "P0365Subquarter.rounded_shell_source_assignment": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "verification_verdict": "PASS",
+  "vm_cleanup": "CONFIRMED",
+  "whole_export_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

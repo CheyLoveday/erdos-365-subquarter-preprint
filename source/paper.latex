@@ -1,0 +1,39 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{unicode-math}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf]
+\setmonofont{lmmono10-regular.otf}[ItalicFont=lmmono10-italic.otf]
+\setmathfont{latinmodern-math.otf}
+\usepackage{xcolor}
+\definecolor{readerblue}{RGB}{23,79,115}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{xurl}
+\usepackage{seqsplit}
+\hypersetup{unicode=true,colorlinks=true,linkcolor=readerblue,urlcolor=readerblue,
+  pdftitle={$title$},pdfauthor={$for(author)$$author$$sep$, $endfor$},
+  pdfsubject={GitHub preprint, 23 November 2026},
+  pdfcreator={Pandoc 3.9.0.2 and Tectonic 0.16.9}}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\emergencystretch=2em
+\widowpenalty=10000
+\clubpenalty=10000
+\renewcommand{\texttt}[1]{{\ttfamily\seqsplit{#1}}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\title{$title$}
+\author{$for(author)$$author$$sep$ \and $endfor$}
+\date{$date$}
+\begin{document}
+\maketitle
+$for(include-before)$
+$include-before$
+$endfor$
+$body$
+$for(include-after)$
+$include-after$
+$endfor$
+\end{document}
