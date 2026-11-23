@@ -4,7 +4,7 @@ The [manuscript](MANUSCRIPT.md) gives the ordinary proof. These notes break it i
 
 **Start here.** Read the goal and dependency map, then LP07–LP08 for the internal coarse construction, LP11–LP13 for the same-minor argument, and LP15–LP18 for the arithmetic count. LP21–LP24 explain why these estimates cover the original population. “By” identifies the inference; the map supplies its exact Lean support. An edge is a mathematical prerequisite, not every Lean import. Historical support modules and finite controls are labelled separately in the map.
 
-The Lean counting theorems assume `StewartPrimitiveThue`. The ordinary proof supplies this premise from Stewart’s published theorem. The independently operated 23 November Linux replay checked the maintained modules together with the November audit supplement. The [verification supplement](SUPPLEMENT.md) gives the exact scope of the replay, the protected comparison and the downstream specialist review.
+The Lean counting theorems assume `StewartPrimitiveThue`. The ordinary proof supplies this premise from Stewart’s published theorem. The independently operated 23 November Linux replay checked the maintained modules together with the November audit supplement. The [verification supplement](SUPPLEMENT.md) gives the exact scope of the replay and the protected comparison.
 
 ## Goal and quantifier discipline
 

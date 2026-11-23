@@ -2,7 +2,7 @@
 
 The [proof notes](../PROOF_NOTES.md) explain the argument. The tables trace each step to the article and the checked Lean source. Edges express mathematical prerequisites at the step level. The Lean links open the implementing declarations and their named contracts.
 
-> Generated, non-authoritative reading copy. Edit the authoring map and regenerate. The public input is [PROOF_MAP.json](PROOF_MAP.json), exported from `research/papers/p0365-subquarter-v1/manuscript/PROOF_MAP.json` with upstream SHA-256 `235415abfb1fa303b026d8adbc2638204b807e2c64950d86467bc7b742fa2baa`. The public data SHA-256 is `7ade37099a672797d4a2bec5fa4071a2a9ff65bb0dc96b7624de1b22518f3182`. Regenerate with `python3 -B render.py`.
+> Generated, non-authoritative reading copy. Edit the authoring map and regenerate. The public input is [PROOF_MAP.json](PROOF_MAP.json), exported from `research/papers/p0365-subquarter-v1/manuscript/PROOF_MAP.json` with upstream SHA-256 `2df66cc383d60e3d5da58303ad48d8e5616217499ed1e3ddcd42ffa08e09022e`. The public data SHA-256 is `8cda97356df37f771c08fc94e1d4e3d4fef8cfc531e14ed90b8ec06c5748560c`. Regenerate with `python3 -B render.py`.
 
 ## Forward map and dependencies
 

@@ -24,7 +24,7 @@ The independent Linux replay finished `COMPLETE / PASS` after all 35
 controls qualified. Six checker executions covered the candidate export.
 A separate protected comparison matched 14 theorem interfaces and four
 definition bodies. Lean takes `StewartPrimitiveThue` as an explicit premise.
-Independent specialist mathematical review remains pending. [Verification scope](FORMAL_VERIFICATION.md)
+[Verification scope](FORMAL_VERIFICATION.md)
 
 ## Sources and reproduction
 
@@ -35,11 +35,18 @@ publication source. The PDF and proof notes are generated from the manuscript an
 pins, the six checker outcomes, control dispositions, axiom sets and receipt
 hashes. [Reproduction instructions](FORMAL_VERIFICATION.md#reproduction)
 
+## Reader corrections
+
+Version 1.0.3 fixes the reproduction command on PDF page 19 and explains
+the scope of the default Lake build. It updates how the publication describes
+its review evidence. The counting result, proof and Lean package carry forward
+from version 1.0.2. [Previous edition](https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/v1.0.2-preprint)
+
 ## Citation and rights
 
 Chey Loveday. *A Subquarter Exponent for Consecutive Powerful Numbers*.
 GitHub preprint, 23 November 2026. Cite the exact repository commit for this
-edition. [Release v1.0.2-preprint](https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/v1.0.2-preprint)
+edition. [Release v1.0.3-preprint](https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/v1.0.3-preprint)
 
 Copyright © 2026 Chey Loveday. The paper, proof notes and verification data
 are available under **CC BY 4.0**. The original Lean and Python code is

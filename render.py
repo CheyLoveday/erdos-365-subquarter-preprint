@@ -86,7 +86,7 @@ def render_pdf(out, build, release_tag):
         "This generated preprint uses the frozen Markdown authoring snapshot.\\par\n"
         "\\noindent Source: \\path{source/MANUSCRIPT.md}.\\par\n"
         "\\noindent Source SHA-256: \\path{" + sha(source) + "}.\\par\n"
-        "\\noindent Generate from the repository root: \\path{python3 -B render.py}.\\par\n"
+        "\\noindent Generate from the repository root: \\verb|python3 -B render.py|.\\par\n"
         "\\noindent The \\href{" + public + "FORMAL_VERIFICATION.md}{verification supplement}"
         " records the formal scope and receipt identities.\\par\n"
     )
@@ -148,6 +148,8 @@ def render_proof_notes(out):
     # in the freshly typeset paper so the visible labels follow its pagination.
     pdf_text = run(["pdftotext", "-layout", str(out / "subquarter-preprint.pdf"), "-"])
     pages = [" ".join(page.split()) for page in pdf_text.split("\f")]
+    if "Generate from the repository root: python3 -B render.py." not in pdf_text:
+        raise ValueError("The PDF must preserve spaces in its reproduction command")
     pdf_passages = {
         "MANUSCRIPT.md#proposition-42--specialized-internal-producer": "Integer relation lemma (also used in Section 7)",
         "MANUSCRIPT.md#real-bound": "the two positive prefactors satisfy",

@@ -1,6 +1,6 @@
 # Formal verification
 
-The 23 November 2026 correspondence review checked the revised manuscript against the same 152-module Lean candidate that passed the independent Linux replay. The original manuscript review and the clean replay retain their own source hashes. This edition corrects the range of one intermediate estimate and clarifies several proof steps. The exponent, counting population and formal statements are unchanged. [Preprint](subquarter-preprint.pdf) · [Proof notes](PROOF_NOTES.md) · [Detailed proof map](source/PROOF_MAP.md)
+The 23 November 2026 correspondence review checked the revised manuscript against the same 152-module Lean candidate that passed the independent Linux replay. The original manuscript review and the clean replay retain their own source hashes. Version 1.0.2 corrected the range of one intermediate estimate and clarified several proof steps. Version 1.0.3 carries forward its mathematical text and updates the description of the publication’s review evidence. [Preprint](subquarter-preprint.pdf) · [Proof notes](PROOF_NOTES.md) · [Detailed proof map](source/PROOF_MAP.md)
 
 | Dimension | Result |
 | --- | --- |
@@ -8,7 +8,6 @@ The 23 November 2026 correspondence review checked the revised manuscript agains
 | Verification verdict | **PASS**. Six individual checks of the candidate export, both inventory reconciliations, strict axiom audits and protected comparison. |
 | Paper coverage | **152 candidate and 44 independent reference modules**, 14 protected theorem interfaces, four protected definition bodies and zero holes. The counting conclusions take Stewart’s quantitative Thue bound as a premise. |
 | Qualification | The 35 A07 controls passed at their recorded scopes. A separate operator performed A11. |
-| Specialist review | Pending. The human mathematical review is separate from the mechanical results. |
 
 Assurance gates A01–A11 and A13 passed for the 22 November manuscript and its frozen formal inputs. The machine-readable
 record preserves the control statuses and exact evidence identities.
@@ -113,8 +112,12 @@ candidate, including 152 Lean modules and three package files. It uses
 Lean/Lake 4.35.0, the pinned Mathlib revision and eight additional locked
 dependencies. [Source hashes and tool pins](sources.json)
 
-With Elan and the pinned Lake dependencies available, build the candidate
-from the repository root.
+Some Lean source comments describe the status when their modules were written.
+The completed A11 replay covers the candidate identified in the evidence table below.
+
+A bare `lake build` selects `PaperAudit` and reaches 144 of the 152 project
+modules at this revision. With Elan and the pinned dependencies available, use
+the following command from the repository root to build all 152.
 
 ```sh
 cd lean
@@ -138,11 +141,18 @@ cmp PROOF_NOTES.md /tmp/subquarter-reading/PROOF_NOTES.md
 cmp source/PROOF_MAP.md /tmp/subquarter-reading/source/PROOF_MAP.md
 ```
 
+## Reader corrections
+
+This edition restores the spaces in the PDF’s reproduction command and identifies
+the complete public Lake build. Its publication wording describes the AI-assisted
+mathematical review and the independent Linux replay. The Lean package, frozen A11
+receipt and checker exports retain their recorded identities. [Previous edition](https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/v1.0.2-preprint)
+
 ## Evidence identities
 
 | Item | SHA-256 |
 | --- | --- |
-| Published Markdown source | `3586129a069973b7a2170c40a10022880b0759ddea6d881620efc15589060ae9` |
+| Published Markdown source | `bff1aec21e07d86be5de4308d90f5fff0aa723fbd6900179931d03a2ab83220b` |
 | Independently reviewed 22 November Markdown source | `d1f57b29e526ddd3ee1af30cfe41a668bd9861e35ec274f9047cec1152ddb35c` |
 | A11 candidate source archive | `0595c5c731ff97f8d0ec38676252825fb77071e3dabe9d28dffa1cc72fe104f4` |
 | A11 protected reference archive | `8e23acf0528ef4599b6bcfcc9bccaf8972d31af1340d7856586face71c20e671` |
