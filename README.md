@@ -38,8 +38,11 @@ hashes. [Reproduction instructions](FORMAL_VERIFICATION.md#reproduction)
 
 Chey Loveday. *A Subquarter Exponent for Consecutive Powerful Numbers*.
 GitHub preprint, 23 November 2026. Cite the exact repository commit for this
-edition. [Release v1.0.0-preprint](https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/v1.0.0-preprint)
+edition. [Release v1.0.1-preprint](https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/v1.0.1-preprint)
 
-Copyright © 2026 Chey Loveday. No additional reuse licence is granted.
+Copyright © 2026 Chey Loveday. The paper, proof notes and verification data
+are available under **CC BY 4.0**. The original Lean and Python code is
+available under **Apache 2.0**. [Licences and file coverage](LICENSE.md)
+
 The paper and Lean formalization involved AI assistance, as described in
 the preprint. The author is responsible for the mathematical claims.
