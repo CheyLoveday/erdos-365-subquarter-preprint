@@ -216,7 +216,8 @@ def render_proof_map(out, lock):
         "The [proof notes](../PROOF_NOTES.md) explain the argument. The tables trace each step to the "
         "article and the checked Lean source. Edges express mathematical prerequisites at the step level. "
         "The Lean links open the implementing declarations and their named contracts.", "",
-        "> Generated reading copy. Its source is [PROOF_MAP.json](PROOF_MAP.json), exported from "
+        "> Generated, non-authoritative reading copy. Edit the authoring map and regenerate. "
+        "The public input is [PROOF_MAP.json](PROOF_MAP.json), exported from "
         f"{MARK}{data['authoring_map_path']}{MARK} with upstream SHA-256 {MARK}{data['authoring_map_sha256']}{MARK}. "
         f"The public data SHA-256 is {MARK}{sha(source)}{MARK}. Regenerate with {MARK}python3 -B render.py{MARK}.", "",
         "## Forward map and dependencies", "",
