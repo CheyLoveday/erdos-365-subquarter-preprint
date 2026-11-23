@@ -8,8 +8,8 @@ public preprint, including [v1.0.0-preprint](https://github.com/CheyLoveday/erdo
 
 | Material | Licence |
 | --- | --- |
-| The article and its PDF, manuscript and typesetting sources in `source/`, Lamport companion, proof notes and diagrams, README and verification guide | [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSES/CC-BY-4.0.txt) |
-| Published verification data, source and citation metadata, and checksums (`verification.json`, `sources.json`, `CITATION.cff` and `SHA256SUMS`) | [CC BY 4.0](LICENSES/CC-BY-4.0.txt) |
+| The article and its PDF, manuscript and typesetting sources in `source/`, Lamport companion, proof notes, correspondence map and diagrams, README and verification guide | [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSES/CC-BY-4.0.txt) |
+| Published verification data, source and citation metadata, and checksums (`source/PROOF_MAP.json`, `verification.json`, `sources.json`, `CITATION.cff` and `SHA256SUMS`) | [CC BY 4.0](LICENSES/CC-BY-4.0.txt) |
 | All original Lean source files and project configuration in `lean/`, including the Lake manifest and toolchain pin, and the Python renderer `render.py` | [Apache License 2.0](LICENSES/Apache-2.0.txt) |
 
 You may share and adapt the paper and data, including commercially. Credit the

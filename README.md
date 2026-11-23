@@ -15,7 +15,8 @@ quantitative Thue theorem. Erdős’s fixed-polylogarithmic question remains ope
 ## Start here
 
 - [Read the preprint (PDF)](subquarter-preprint.pdf)
-- [Follow the proof in the Lamport notes](PROOF_NOTES.md), starting with the [dependency map](PROOF_NOTES.md#dependency-map)
+- [Follow the proof in the Lamport notes](PROOF_NOTES.md), starting with the [overview diagram](PROOF_NOTES.md#dependency-map)
+- [Trace all 25 steps to the article and the 172 selected Lean declarations](source/PROOF_MAP.md)
 - [See exactly what Lean and odProof verified](FORMAL_VERIFICATION.md)
 - [Browse the checked Lean candidate](lean)
 
@@ -28,7 +29,7 @@ Independent specialist mathematical review remains pending. [Verification scope]
 ## Sources and reproduction
 
 [`source/MANUSCRIPT.md`](source/MANUSCRIPT.md) is the frozen Pandoc Markdown
-publication source. The PDF and proof notes are generated reading copies.
+publication source. The PDF and proof notes are generated from the manuscript and its companion. The linked proof map is generated from the same correspondence data used in the authoring repository.
 [`sources.json`](sources.json) binds the authoring revision and file hashes.
 [`verification.json`](verification.json) records the compiler and dependency
 pins, the six checker outcomes, control dispositions, axiom sets and receipt
@@ -38,7 +39,7 @@ hashes. [Reproduction instructions](FORMAL_VERIFICATION.md#reproduction)
 
 Chey Loveday. *A Subquarter Exponent for Consecutive Powerful Numbers*.
 GitHub preprint, 23 November 2026. Cite the exact repository commit for this
-edition. [Release v1.0.1-preprint](https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/v1.0.1-preprint)
+edition. [Release v1.0.2-preprint](https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/v1.0.2-preprint)
 
 Copyright © 2026 Chey Loveday. The paper, proof notes and verification data
 are available under **CC BY 4.0**. The original Lean and Python code is

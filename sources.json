@@ -1,5 +1,5 @@
 {
-  "authoring_commit": "c5f5467a6186a1615d02c4031fe8c9c9cd488ed8",
+  "authoring_commit": "a6ab007cb1159322096f683d48298560bb5ca9bd",
   "lean_source_sha256": {
     "PaperAudit.lean": "16555d65a7496cbb7bf28d810a15488d51d3d27fca304d4e7bef2a26df08fc8e",
     "PaperAudit/AngularWitness.lean": "69eec4cbf1a883a245d3b4e1ec0fb5aa7f4b42918f02920ba1426fbf173fcdbe",
@@ -158,10 +158,12 @@
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
   },
   "pandoc_version": "pandoc 3.9.0.2",
+  "release_tag": "v1.0.2-preprint",
   "reviewed_authoring_commit": "5468b3a5181900f4157105978ebc92cf4f318a20",
   "source_sha256": {
-    "LAMPORT_COMPANION.md": "1183c603225fdb17f6008698b4218cc17c880dd36fe90faeada0ea61576e560a",
-    "MANUSCRIPT.md": "f2ca5be15fa51d41619c6cb5421cb774f7ad67447eae60700e339125c1d17eb2",
+    "LAMPORT_COMPANION.md": "6fc25fbc4700d036e277dfd32b6cbce76f44ace21b08b314ce2777447a125c15",
+    "MANUSCRIPT.md": "3586129a069973b7a2170c40a10022880b0759ddea6d881620efc15589060ae9",
+    "PROOF_MAP.json": "7ade37099a672797d4a2bec5fa4071a2a9ff65bb0dc96b7624de1b22518f3182",
     "paper.latex": "05ac6cc33decbff131d25a8fae77115f6a1d0b01cffa99fa789b7a5ca3e1a908"
   },
   "tectonic_bundle_sha256": "6ffe055852f8faf66c0acbe1a7fb27f87b869a90bad1204f3bf4d9683f597c7c",

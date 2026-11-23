@@ -1,4 +1,4 @@
-"""Generate the preprint PDF and GitHub proof notes from their frozen sources."""
+"""Generate the preprint, proof notes and linked correspondence from their frozen sources."""
 from __future__ import annotations
 
 import argparse
@@ -16,7 +16,7 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT / "source"
 READER = "markdown+tex_math_dollars+tex_math_single_backslash+gfm_auto_identifiers-smart-superscript"
-PUBLIC = "https://github.com/CheyLoveday/erdos-365-subquarter-preprint/blob/main/"
+REPOSITORY = "https://github.com/CheyLoveday/erdos-365-subquarter-preprint"
 BUNDLE = "https://relay.fullyjustified.net/default_bundle_v33.tar"
 MARK = chr(96)
 
@@ -66,13 +66,14 @@ def rewrite(doc, mapping):
     return rendered, steps
 
 
-def render_pdf(out, build):
+def render_pdf(out, build, release_tag):
+    public = f"{REPOSITORY}/blob/{release_tag}/"
     source = SOURCE / "MANUSCRIPT.md"
     doc = parse(source)
     converted, links = rewrite(doc, {
-        "LAMPORT_COMPANION.md#lp07": PUBLIC + "PROOF_NOTES.md#lp07",
-        "LAMPORT_COMPANION.md#lp16": PUBLIC + "PROOF_NOTES.md#lp16",
-        "SUPPLEMENT.md": PUBLIC + "FORMAL_VERIFICATION.md",
+        "LAMPORT_COMPANION.md#lp07": public + "PROOF_NOTES.md#lp07",
+        "LAMPORT_COMPANION.md#lp16": public + "PROOF_NOTES.md#lp16",
+        "SUPPLEMENT.md": public + "FORMAL_VERIFICATION.md",
     })
     displays = list(nodes(doc["blocks"], "Math"))
     tags = re.findall(r"\\tag\{([^}]+)\}", source.read_text())
@@ -86,7 +87,7 @@ def render_pdf(out, build):
         "\\noindent Source: \\path{source/MANUSCRIPT.md}.\\par\n"
         "\\noindent Source SHA-256: \\path{" + sha(source) + "}.\\par\n"
         "\\noindent Generate from the repository root: \\path{python3 -B render.py}.\\par\n"
-        "\\noindent The \\href{" + PUBLIC + "FORMAL_VERIFICATION.md}{verification supplement}"
+        "\\noindent The \\href{" + public + "FORMAL_VERIFICATION.md}{verification supplement}"
         " records the formal scope and receipt identities.\\par\n"
     )
     tex = run(
@@ -159,10 +160,10 @@ def render_proof_notes(out):
                 raise ValueError(f"Expected one PDF page for {passage!r}, found {matches}")
             link["c"][1].extend([{"t": "Space"}, {"t": "Str", "c": f"(PDF p. {matches[0]})"}])
     converted, links = rewrite(doc, {
-        "../../../../docs/research/2026-10-15-p0365-triple-checked-v3/THUE_PRIMARY_APPLICATION.md":
-            "FORMAL_VERIFICATION.md#stewarts-theorem",
-        "COVERAGE.md": "FORMAL_VERIFICATION.md",
-        "COVERAGE.md#sufficient-formal-variants": "FORMAL_VERIFICATION.md#formal-variants",
+        "SUPPLEMENT.md": "FORMAL_VERIFICATION.md#formal-variants",
+        **{f"PROOF_MAP.md#{anchor}": f"source/PROOF_MAP.md#{anchor}" for anchor in (
+            "forward-map-and-dependencies", "reverse-declaration-index", "historical-bindings-and-joins",
+        )},
         "MANUSCRIPT.md": "subquarter-preprint.pdf",
         **dict.fromkeys(pdf_passages, "subquarter-preprint.pdf"),
     })
@@ -175,7 +176,7 @@ def render_proof_notes(out):
         "# Lamport proof notes\n\n"
         "Read the [preprint](subquarter-preprint.pdf) and [current verification supplement](FORMAL_VERIFICATION.md). "
         "These generated notes reproduce the technical sections of the frozen companion, beginning with its goal. "
-        "See the source snapshot for the dated introduction and historical references.\n\n"
+        "Find the prerequisites, Lean declarations and contract dispositions in the [full proof map](source/PROOF_MAP.md).\n\n"
         "> Generated reading copy. Edit the authoring source to change the mathematical text.\n\n"
         "<!-- Source: source/LAMPORT_COMPANION.md\n"
         f"Source SHA-256: {sha(source)}\n"
@@ -183,6 +184,74 @@ def render_proof_notes(out):
     )
     out.joinpath("PROOF_NOTES.md").write_text(header + content)
     return {"math_nodes": len(list(nodes(doc["blocks"], "Math"))), "mapped_links": links}
+
+
+def render_proof_map(out, lock):
+    source = SOURCE / "PROOF_MAP.json"
+    data = json.loads(source.read_bytes())
+    for key, file in (("manuscript_sha256", "MANUSCRIPT.md"), ("companion_sha256", "LAMPORT_COMPANION.md")):
+        if data[key] != sha(SOURCE / file):
+            raise ValueError(f"Proof map refers to a different {file}")
+
+    def steps(ids):
+        return ", ".join(f"[{step}](../PROOF_NOTES.md#{step.lower()})" for step in ids) or "—"
+
+    def declaration(name, location):
+        path = Path(location["path"])
+        relative = path.relative_to("lean").as_posix()
+        file = ROOT / path
+        if lock["lean_source_sha256"].get(relative) != sha(file):
+            raise ValueError(f"Unbound Lean source {path}")
+        lines = file.read_bytes().splitlines(keepends=True)
+        first, end = location["line"], location["end_before_line"]
+        if not 1 <= first < end <= len(lines) + 1:
+            raise ValueError(f"Invalid source bounds for {name}")
+        if sha256(b"".join(lines[first-1:end-1])).hexdigest() != location["span_sha256"]:
+            raise ValueError(f"Stale declaration span for {name}")
+        short = name.removeprefix("P0365Subquarter.")
+        return f"[{MARK}{short}{MARK}](../{path.as_posix()}#L{first})"
+
+    rows = [
+        "# Manuscript and Lean proof map", "",
+        "The [proof notes](../PROOF_NOTES.md) explain the argument. The tables trace each step to the "
+        "article and the checked Lean source. Edges express mathematical prerequisites at the step level. "
+        "The Lean links open the implementing declarations and their named contracts.", "",
+        "> Generated, non-authoritative reading copy. Edit the authoring map and regenerate. "
+        "The public input is [PROOF_MAP.json](PROOF_MAP.json), exported from "
+        f"{MARK}{data['authoring_map_path']}{MARK} with upstream SHA-256 {MARK}{data['authoring_map_sha256']}{MARK}. "
+        f"The public data SHA-256 is {MARK}{sha(source)}{MARK}. Regenerate with {MARK}python3 -B render.py{MARK}.", "",
+        "## Forward map and dependencies", "",
+        "| Proof step | Article source | Inputs | Used by |", "| --- | --- | --- | --- |",
+    ]
+    for step in data["steps"]:
+        article = ", ".join(f"[§{a['number']}](MANUSCRIPT.md#{a['anchor']})" for a in step["manuscript_sections"])
+        users = [other["id"] for other in data["steps"] if step["id"] in other["depends_on"]]
+        rows.append(f"| {steps([step['id']])} · {step['title']} | {article} | {steps(step['depends_on'])} | {steps(users)} |")
+
+    rows += ["", "## Reverse declaration index", "",
+             "Definitions specify objects and contracts. Theorem rows link to proofs. Each linked source span "
+             "is checked against the frozen candidate during generation.", "",
+             "| Declaration | Kind and role | Named target | Step | Contracts |", "| --- | --- | --- | --- | --- |"]
+    for row in data["declarations"]:
+        impl = declaration(row["name"], row["source"])
+        target = declaration(row["target"], row["target_source"]) if row["target"] else "—"
+        obligations = ", ".join(row["obligations"]) or "—"
+        rows.append(f"| {impl} | {row['kind']} · {row['role'].replace('_', ' ')} | {target} | {steps([row['step']])} | {obligations} |")
+
+    rows += ["", "## Historical bindings and joins", "",
+             "The disposition records what became of each earlier contract. The frozen data also names "
+             "the implementing, replacement and consuming declarations. Seven literal contracts are unused on the selected route.", "",
+             "| Contract | Selected disposition | Producing steps | Consuming steps |", "| --- | --- | --- | --- |"]
+    for row in data["obligations"]:
+        title = row["title"].replace("|", "/")
+        disposition = row["disposition"].lower().replace("_", " ")
+        rows.append(f"| {MARK}{row['id']}{MARK} · {title} | {disposition} | {steps(row['steps'])} | {steps(row['consumer_steps'])} |")
+    rows += ["", "Two annotations qualify the inherited contract wording.", ""]
+    rows.extend(f"- {MARK}{row['id']}{MARK} — {row['note']}" for row in data["historical_text_annotations"])
+    destination = out / "source" / "PROOF_MAP.md"
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text("\n".join([*rows, ""]))
+    return {key: len(data[key]) for key in ("steps", "declarations", "obligations")}
 
 
 def main():
@@ -199,11 +268,12 @@ def main():
         if run([tool, "--version"]).splitlines()[0] != lock[tool + "_version"]:
             raise ValueError(f"Use the locked {tool} version")
     with TemporaryDirectory(prefix="subquarter-preprint-") as temporary:
-        pdf = render_pdf(out, Path(temporary))
+        pdf = render_pdf(out, Path(temporary), lock["release_tag"])
     notes = render_proof_notes(out)
-    print(json.dumps({"pdf": pdf, "proof_notes": notes,
+    mapping = render_proof_map(out, lock)
+    print(json.dumps({"pdf": pdf, "proof_notes": notes, "proof_map": mapping,
                       "outputs": {name: sha(out / name) for name in (
-                          "subquarter-preprint.pdf", "PROOF_NOTES.md")}}, indent=2))
+                          "subquarter-preprint.pdf", "PROOF_NOTES.md", "source/PROOF_MAP.md")}}, indent=2))
 
 
 if __name__ == "__main__":
