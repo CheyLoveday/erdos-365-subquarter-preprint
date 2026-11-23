@@ -5,7 +5,7 @@ Read the [preprint](subquarter-preprint.pdf) and [current verification supplemen
 > Generated reading copy. Edit the authoring source to change the mathematical text.
 
 <!-- Source: source/LAMPORT_COMPANION.md
-Source SHA-256: 6fc25fbc4700d036e277dfd32b6cbce76f44ace21b08b314ce2777447a125c15
+Source SHA-256: ef5214e9d4693ca43a3aec59b8e0e6d2b449fa981ac35402e0c3c368b4048beb
 Generation: python3 -B render.py
 -->
 

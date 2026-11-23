@@ -696,11 +696,11 @@ $$h^{21}\!\left(\prod_{0\le i<j\le6}(\xi_j-\xi_i)\right)\det J_e+O(h^{22}),$$
 
 which is nonzero to order 21. All rows are fixed polynomials on a compact node range, so this remainder follows directly from their finite expansions. Taking $\xi_7=\xi_0$ makes the all-smooth determinant zero. For any fixed admissible $\lambda\ne0$, the full determinant then has this nonzero leading term multiplied by $\lambda$, realizing order 21 in the enlarged model.
 
-# 14. Formal correspondence and remaining acceptance
+# 14. Formal correspondence
 
 The Lean developments include `original_shell_source_count`, `natural_pair_count` and `real_pair_count` in the namespace `P0365Subquarter`. Each takes the quantitative Thue bound (9.4) as the explicit premise `StewartPrimitiveThue`. On 23 November 2026, all 35 predeclared controls qualified and an independently operated clean Linux replay returned `COMPLETE / PASS`. The run reconciled the exports from 152 candidate and 44 reference modules, passed all six checkers, completed strict whole-export and target-transitive axiom audits, and matched fourteen theorem interfaces and four protected definition bodies with no definition holes. The formal result proves the counting bounds given the stated premise. The ordinary argument invokes Stewart's published theorem to supply it. The [supplement](SUPPLEMENT.md) records the exact scope, including the common-constant witness.
 
-AI systems assisted the mathematical research, Lean formalization, manuscript preparation and critique. The author is responsible for the mathematical claims. Independent specialist review remains pending.
+AI systems assisted the mathematical research, Lean formalization, manuscript preparation and critique. The author is responsible for the mathematical claims.
 
 # References and supporting proof sources
 

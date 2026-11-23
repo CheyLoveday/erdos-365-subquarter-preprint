@@ -227,7 +227,7 @@
     ]
   ],
   "edition_date": "2026-11-23",
-  "edition_manuscript_sha256": "3586129a069973b7a2170c40a10022880b0759ddea6d881620efc15589060ae9",
+  "edition_manuscript_sha256": "bff1aec21e07d86be5de4308d90f5fff0aa723fbd6900179931d03a2ab83220b",
   "frozen_formal_input_commit": "331f8c3d4837a7bdc3c49f27441d7562eff7de24",
   "maintained_lean_tree": "c7e6d4b6069d5f14182fbf145972631e42975c63",
   "odproof_revision": "cecb980fe7c3c7573418027e3a7b05002fdda442",
@@ -245,7 +245,6 @@
       "P0365Subquarter.StewartPrimitiveThue"
     ],
     "reference_lean_modules": 44,
-    "specialist_review": "PENDING",
     "theorem_interfaces": [
       "P0365Subquarter.original_shell_source_count",
       "P0365Subquarter.natural_pair_count",
