@@ -1,15 +1,21 @@
 cff-version: 1.2.0
-message: "If you cite this preprint, include its date and exact repository commit."
-title: "A Subquarter Exponent for Consecutive Powerful Numbers"
+message: "Cite the repository archive for the complete bundle and the preferred citation for the preprint edition."
+type: software
+title: "A Subquarter Exponent for Consecutive Powerful Numbers (repository archive)"
 authors:
   - family-names: Loveday
     given-names: Chey
-date-released: "2026-11-23"
-version: "1.0.3-preprint"
+date-released: "2026-11-27"
+version: "archive-v1.0.3-preprint"
 license:
   - CC-BY-4.0
   - Apache-2.0
-url: "https://github.com/CheyLoveday/erdos-365-subquarter-preprint"
+repository-code: "https://github.com/CheyLoveday/erdos-365-subquarter-preprint"
+url: "https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/archive-v1.0.3-preprint"
+abstract: >-
+  Repository archive of the 23 November 2026 preprint (v1.0.3-preprint),
+  including the published PDF, publication source, proof notes,
+  Lean formalization and verification records.
 preferred-citation:
   type: unpublished
   title: "A Subquarter Exponent for Consecutive Powerful Numbers"
