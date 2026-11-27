@@ -1,0 +1,19 @@
+{
+  "title": "A Subquarter Exponent for Consecutive Powerful Numbers (repository archive)",
+  "creators": [
+    {
+      "name": "Loveday, Chey"
+    }
+  ],
+  "description": "<p>Repository archive of the 23 November 2026 preprint (v1.0.3-preprint), including the published PDF, publication source, proof notes, Lean formalization and verification records.</p><p>CC BY 4.0 covers the paper, proof notes and verification data. Apache 2.0 covers the original Lean and Python code. See the repository’s <a href=\"https://github.com/CheyLoveday/erdos-365-subquarter-preprint/blob/archive-v1.0.3-preprint-r2/LICENSE.md\">licence and file coverage</a>.</p>",
+  "upload_type": "software",
+  "access_right": "open",
+  "version": "archive-v1.0.3-preprint-r2",
+  "license": "other-open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/v1.0.3-preprint",
+      "relation": "isSupplementTo"
+    }
+  ]
+}
