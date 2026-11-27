@@ -10,6 +10,7 @@ version: "archive-v1.0.3-preprint-r2"
 license:
   - CC-BY-4.0
   - Apache-2.0
+doi: "10.5281/zenodo.24575546"
 repository-code: "https://github.com/CheyLoveday/erdos-365-subquarter-preprint"
 url: "https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/archive-v1.0.3-preprint-r2"
 abstract: >-
