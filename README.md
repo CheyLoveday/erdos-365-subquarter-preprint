@@ -48,7 +48,7 @@ Chey Loveday. *A Subquarter Exponent for Consecutive Powerful Numbers*.
 GitHub preprint, 23 November 2026. Cite the exact repository commit for this
 edition. [Release v1.0.3-preprint](https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/v1.0.3-preprint)
 
-Use the [archival release](https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/archive-v1.0.3-preprint) to cite the repository snapshot. [CITATION.cff](CITATION.cff) gives the
+Use the [archival release](https://github.com/CheyLoveday/erdos-365-subquarter-preprint/releases/tag/archive-v1.0.3-preprint-r2) to cite the repository snapshot. [CITATION.cff](CITATION.cff) gives the
 archive citation and the preferred citation for the preprint.
 
 Copyright © 2026 Chey Loveday. The paper, proof notes and verification data
